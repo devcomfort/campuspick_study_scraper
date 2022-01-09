@@ -289,18 +289,3 @@ class ClientHandler(object):
         result = list(map(f, zip(IDs, [self.cookies] * len(IDs))))
 
         return result
-
-
-def main():
-    Data = ClientHandler()
-
-    Data.login("comfort", "dearkimdh02")
-
-    __return__ = Data.get(0, 20)
-
-    for v in __return__:
-        print("%s (%s, %d)" % (v.title, v.Writer.name, v.post_id))
-
-
-if __name__ == "__main__":
-    main()
